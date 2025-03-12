@@ -3,24 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surprise Concert Ticket</title>
+    <title>For My Love 💛</title>
     <style>
-        body { text-align: center; font-family: Arial, sans-serif; padding: 20px; }
-        img { max-width: 100%; height: auto; }
-        .container { max-width: 600px; margin: auto; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: #FFF3CD; /* Soft warm yellow */
+            color: #333;
+            text-align: center;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #FFB703;
+        }
+        p {
+            font-size: 1.3em;
+            margin: 15px 0;
+        }
+        .alien {
+            width: 180px;
+            margin-top: 15px;
+            animation: float 3s infinite ease-in-out;
+        }
+        .scroll-down {
+            font-size: 1.2em;
+            margin-top: 40px;
+            animation: bounce 1.5s infinite;
+        }
+        .qr-code {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            color: #444;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-top: 20px;
+            border: 2px solid #444;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        a:hover {
+            background: #444;
+            color: yellow;
+        }
+        .next-section {
+            height: 100vh;
+            background: #FFE8A1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎶 Surprise! 🎶</h1>
-        <p>Hey love, get ready for an unforgettable night! Here's your special surprise. ❤️</p>
-        
-        <h2>📍 Event Preview</h2>
-        <img src="https://via.placeholder.com/400x300.png?text=Concert+Poster" alt="Concert Poster">
-        
-        <h2>🎟 Your Ticket</h2>
-        <p>Scan this QR code to access your ticket!</p>
-        <img src="https://via.placeholder.com/200.png?text=QR+Code" alt="QR Code">
+
+    <!-- First Page: Love Message -->
+    <div class="section">
+        <h1>Hey, My Love 💛</h1>
+        <p>I know how much you have been <strong>good to me</strong>, always caring for me in ways words can't describe.</p>
+        <p>Every moment with you is <strong>precious</strong>—the way you laugh, the joy we share, and even the difficult times we've faced together.</p>
+        <p>Let’s <strong>fight together, run together, and smile together</strong> for the years to come. 🏃‍♂️💪😊</p>
+        <p>You are <strong>deeply loved, truly cherished, and forever in my heart.</strong> 💕</p>
+        <p class="scroll-down">⬇️ Scroll down for a surprise ⬇️</p>
+        <a href="#surprise"><img class="alien" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/alien.png"></a>    
+</div>
+
+    <!-- Second Page: QR Code Surprise -->
+    <div id="surprise" class="next-section">
+        <h1>👽💌 A Special Surprise for You!</h1>
+        <img class="alien" src="https://upload.wikimedia.org/wikipedia/en/6/69/LGMs-toy-story.png" alt="Toy Story Aliens">
+        <p>Scan this QR code to find out how much you mean to me! 😘</p>
+        <div class="qr-code">
+            <img src="YOUR_QR_CODE_IMAGE_URL_HERE" alt="QR Code" width="200">
+        </div>
+        <a href="YOUR_QR_CODE_URL_HERE" target="_blank">Click here if QR code doesn’t load</a>
     </div>
+
 </body>
 </html>

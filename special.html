@@ -17,8 +17,8 @@
             color: #333;
             text-align: center;
         }
-        .section {
-            height: 100vh;
+        .section, .next-section {
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -26,102 +26,77 @@
             padding: 20px;
         }
         h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             color: #FFB703;
         }
         p {
-            font-size: 1.3em;
+            font-size: 1.2em;
             margin: 15px 0;
+            padding: 0 10px;
         }
-        .alien {
-            width: 180px;
-            margin-top: 15px;
-            animation: float 3s infinite ease-in-out;
+        .alien, .bear {
+            max-width: 100px;
+            height: auto;
         }
         .scroll-down {
             font-size: 1.2em;
             margin-top: 40px;
             animation: bounce 1.5s infinite;
         }
+        .qr-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
         .qr-code {
             background: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
-        a {
-            color: #444;
-            text-decoration: none;
-            font-size: 1.2em;
-            display: inline-block;
-            margin-top: 20px;
-            border: 2px solid #444;
-            padding: 10px 20px;
-            border-radius: 10px;
-        }
-        a:hover {
-            background: #444;
-            color: yellow;
-        }
-        .next-section {
-            height: 100vh;
-            background: #FFE8A1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+        .qr-code img {
+            width: 150px;
+            height: auto;
         }
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(10px); }
         }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        .bear {
-            width: 100px;  /* Adjust width */
-            height: 150px; /* Set specific height */
-            object-fit: contain; /* Ensures proper scaling */
-        }
     </style>
 </head>
 <body>
-
-    <!-- First Page: Love Message -->
     <div class="section">
         <h1>Hey, My Love 💛</h1>
         <p>I know how much you have been <strong>good to me</strong>, always caring for me in ways words can't describe.</p>
         <p>Every moment with you is <strong>precious</strong>—the way you laugh, the joy we share, and even the difficult times we've faced together.</p>
         <p>Let’s <strong>fight together, run together, and smile together</strong> for the years to come. 🏃‍♂️💪😊</p>
         <p>You are <strong>deeply loved, truly cherished, and forever in my heart.</strong> 💕</p>
-        <p>  <strong>Actions speaks louder than words!!!!Let's Move ON!!!</strong> 💕</p>
-             <p class="scroll-down">
-        <a href="#surprise">
-            <img class="alien" src="https://cdn.jsdelivr.net/gh/ofreed0mhuio/myimg/alien.png" alt="Toy Story Alien">
-        </a>
-        <span>⬇️ Scroll down for a surprise ⬇️</span>
-        <a href="#surprise">
-            <img class="bear" src="https://cdn.jsdelivr.net/gh/ofreed0mhuio/myimg/bear.png" alt="Cute Bear">
-        </a>
-    </p>  
-           
-</div>
-
-    <!-- Second Page: QR Code Surprise -->
-    <div id="surprise" class="next-section">
-        <h1>👽💌 A Special Surprise for You!</h1>
-        <img class="alien" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/pretty.jpeg" alt="Toy Story Aliens" height="150" width="150">
-        <p>Scan this QR code to find out how much you mean to me! 😘</p>
-        <div class="qr-code">
-            <img src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/qr_code_surprise1.png" alt="QR Code" width="200">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/qr_code_surprise2.png" alt="QR Code" width="200">
-        </div>
-
-            
-
+        <p><strong>Actions speak louder than words!!!! Let's Move ON!!!</strong> 💕</p>
+        <p class="scroll-down">
+            <a href="#surprise">
+                <img class="alien" src="https://cdn.jsdelivr.net/gh/ofreed0mhuio/myimg/alien.png" alt="Toy Story Alien">
+            </a>
+            <span>⬇️ Scroll down for a surprise ⬇️</span>
+            <a href="#surprise">
+                <img class="bear" src="https://cdn.jsdelivr.net/gh/ofreed0mhuio/myimg/bear.png" alt="Cute Bear">
+            </a>
+        </p>
     </div>
 
+    <div id="surprise" class="next-section">
+        <h1>👽💌 A Special Surprise for You!</h1>
+        <img class="alien" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/pretty.jpeg" alt="Toy Story Aliens" width="120">
+        <p>Scan this QR code to find out how much you mean to me! 😘</p>
+        <div class="qr-container">
+            <div class="qr-code">
+                <img src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/qr_code_surprise1.png" alt="QR Code">
+            </div>
+            <div class="qr-code">
+                <img src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/qr_code_surprise2.png" alt="QR Code">
+            </div>
+        </div>
+    </div>
 </body>
 </html>

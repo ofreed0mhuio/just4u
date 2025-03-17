@@ -7,10 +7,11 @@
     <style>
         body {
             text-align: center;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: black;
             color: white;
             transition: background-color 1s, color 1s;
+            padding: 20px;
         }
         .hidden-content {
             display: none;
@@ -18,11 +19,28 @@
         .reveal-btn {
             background-color: yellow;
             color: black;
-            padding: 10px 20px;
-            font-size: 1.2em;
+            padding: 15px 25px;
+            font-size: 1.5em;
             border: none;
+            border-radius: 25px;
             cursor: pointer;
             margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        .reveal-btn:hover {
+            transform: scale(1.1);
+        }
+        .container {
+            padding: 20px;
+        }
+        .heart {
+            font-size: 2em;
+            color: red;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
         .scroll-down {
             font-size: 1.2em;
@@ -50,6 +68,14 @@
             width: 150px;
             height: auto;
         }
+        .message-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -58,15 +84,19 @@
         Your browser does not support the audio element.
     </audio>
     
-    <h1>Hey, My Love 💛</h1>
-    <p>The world is dark without your smile... But, I have something special for you. 😘</p>
-    <button class="reveal-btn" onclick="showSurprise()">Tap for a Surprise!</button>
+    <div class="container">
+        <h1>Hey, My Love <span class="heart">❤️</span></h1>
+        <p>The world is dark without your smile... But, I have something special for you. 😘</p>
+        <button class="reveal-btn" onclick="showSurprise()">Tap for a Surprise!</button>
+    </div>
     
     <div id="hiddenContent" class="hidden-content">
-        <h1>👽💌 A Special Surprise for You!</h1>
-        <p>You are <strong>deeply loved, truly cherished, and forever in my heart.</strong> 💕</p>
-        <img class="alien" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/pretty.jpeg" alt="Toy Story Aliens" width="120">
-        <p>Scan this QR code to find out how much you mean to me! 😘</p>
+        <div class="message-box">
+            <h1>👽💌 A Special Surprise for You!</h1>
+            <p>You are <strong>deeply loved, truly cherished, and forever in my heart.</strong> 💕</p>
+            <img class="alien" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/pretty.jpeg" alt="Toy Story Aliens" width="120">
+            <p>Scan this QR code to find out how much you mean to me! 😘</p>
+        </div>
         <div class="qr-container">
             <div class="qr-code">
                 <img src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/qr_code_surprise1.png" alt="QR Code">

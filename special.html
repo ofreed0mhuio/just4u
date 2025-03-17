@@ -13,13 +13,9 @@
             font-family: 'Arial', sans-serif;
         }
         body {
-            background: #F8E1A6; /* Softer warm yellow for light off */
+            background: #FFF3CD; /* Soft warm yellow */
             color: #333;
             text-align: center;
-            transition: background 1s, color 1s;
-        }
-        .hidden-content {
-            display: none;
         }
         .section, .next-section {
             min-height: 100vh;
@@ -68,20 +64,6 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(10px); }
         }
-        .reveal-btn {
-            background-color: #FFB703;
-            color: black;
-            padding: 15px 25px;
-            font-size: 1.5em;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: transform 0.3s;
-        }
-        .reveal-btn:hover {
-            transform: scale(1.1);
-        }
     </style>
 </head>
 <body>
@@ -92,10 +74,18 @@
         <p>Let’s <strong>fight together, run together, and smile together</strong> for the years to come. 🏃‍♂️💪😊</p>
         <p>You are <strong>deeply loved, truly cherished, and forever in my heart.</strong> 💕</p>
         <p><strong>Actions speak louder than words!!!! Let's Move ON!!!</strong> 💕</p>
-        <button class="reveal-btn" onclick="showSurprise()">My Heart for You 💖</button>
+        <p class="scroll-down">
+            <a href="#surprise">
+                <img class="alien" src="https://cdn.jsdelivr.net/gh/ofreed0mhuio/myimg/alien.png" alt="Toy Story Alien">
+            </a>
+            <span>⬇️ Scroll down for a surprise ⬇️</span>
+            <a href="#surprise">
+                <img class="bear" src="https://cdn.jsdelivr.net/gh/ofreed0mhuio/myimg/bear.png" alt="Cute Bear">
+            </a>
+        </p>
     </div>
 
-    <div id="hiddenContent" class="hidden-content next-section">
+    <div id="surprise" class="next-section">
         <h1>👽💌 A Special Surprise for You!</h1>
         <img class="alien" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/pretty.jpeg" alt="Toy Story Aliens" width="120">
         <p>Scan this QR code to find out how much you mean to me! 😘</p>
@@ -108,14 +98,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function showSurprise() {
-            document.body.style.background = "linear-gradient(to bottom, #FFDEE9, #B5FFFC)"; /* Sweet romantic gradient */
-            document.body.style.color = "#333";
-            document.getElementById("hiddenContent").style.display = "block";
-            document.querySelector(".reveal-btn").style.display = "none";
-        }
-    </script>
 </body>
 </html>

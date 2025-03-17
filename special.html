@@ -24,6 +24,10 @@
             cursor: pointer;
             margin-top: 20px;
         }
+        .alien, .bear {
+            max-width: 100px;
+            height: auto;
+        }
         .scroll-down {
             font-size: 1.2em;
             margin-top: 40px;
@@ -50,6 +54,14 @@
             width: 150px;
             height: auto;
         }
+                .section, .next-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -61,13 +73,25 @@
     <h1>Hey, My Love 💛</h1>
     <p>The world is dark without your smile... But, I have something special for you. 😘</p>
     <button class="reveal-btn" onclick="showSurprise()">Tap for a Surprise!</button>
-    
+
+   <div class="section">
     <div id="hiddenContent" class="hidden-content">
             <p>I know how much you have been <strong>good to me</strong>, always caring for me in ways words can't describe.</p>
             <p>Every moment with you is <strong>precious</strong>—the way you laugh, the joy we share, and even the difficult times we've faced together.</p>
             <p>Let’s <strong>be together, run together, and smile together</strong> for the years to come. 🏃‍♂️💪😊</p>
             <p>You are <strong>deeply loved, truly cherished, and forever in my heart.</strong> 💕</p>
             <p><strong>Actions speak louder than words!!!! Let's Move ON!!!</strong> 💕</p>
+        <p class="scroll-down">
+            <a href="#surprise">
+                <img class="alien" src="https://cdn.jsdelivr.net/gh/ofreed0mhuio/myimg/alien.png" alt="Toy Story Alien">
+            </a>
+            <span>⬇️ Scroll down for a surprise ⬇️</span>
+            <a href="#surprise">
+                <img class="bear" src="https://cdn.jsdelivr.net/gh/ofreed0mhuio/myimg/bear.png" alt="Cute Bear">
+            </a>
+        </p>
+            </div>
+       <div id="surprise" class="next-section">
         <img class="alien" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/pretty.jpeg" alt="Toy Story Aliens" width="120">
         <p>Scan this QR code to find out how much you mean to me! 😘</p>
         <div class="qr-container">
@@ -79,7 +103,7 @@
             </div>
         </div>
     </div>
-
+  </div>
     <script>
         function showSurprise() {
             document.body.style.backgroundColor = "#FFF3CD";

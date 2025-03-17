@@ -13,9 +13,10 @@
             font-family: 'Arial', sans-serif;
         }
         body {
-            background: #FFF3CD; /* Soft warm yellow */
+            background: #FFF3CD;
             color: #333;
             text-align: center;
+            transition: background 0.5s ease-in-out;
         }
         .section, .next-section {
             min-height: 100vh;
@@ -28,11 +29,13 @@
         h1 {
             font-size: 2em;
             color: #FFB703;
+            transition: text-shadow 0.5s ease-in-out;
         }
         p {
             font-size: 1.2em;
             margin: 15px 0;
             padding: 0 10px;
+            transition: color 0.5s ease-in-out;
         }
         .alien, .bear {
             max-width: 100px;
@@ -60,6 +63,25 @@
             width: 150px;
             height: auto;
         }
+        .light-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background: #FFB703;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .light-button:hover {
+            background: #FFA500;
+        }
+        .light-on {
+            background: #FFFAE5 !important;
+        }
+        .light-on h1, .light-on p {
+            text-shadow: 0px 0px 10px rgba(255, 183, 3, 0.8);
+        }
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(10px); }
@@ -74,6 +96,7 @@
         <p>Let’s <strong>fight together, run together, and smile together</strong> for the years to come. 🏃‍♂️💪😊</p>
         <p>You are <strong>deeply loved, truly cherished, and forever in my heart.</strong> 💕</p>
         <p><strong>Actions speak louder than words!!!! Let's Move ON!!!</strong> 💕</p>
+        <button class="light-button" onclick="lightUp()">Click me to Light Up! ✨</button>
         <p class="scroll-down">
             <a href="#surprise">
                 <img class="alien" src="https://cdn.jsdelivr.net/gh/ofreed0mhuio/myimg/alien.png" alt="Toy Story Alien">
@@ -98,5 +121,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function lightUp() {
+            document.body.classList.toggle('light-on');
+        }
+    </script>
 </body>
 </html>

@@ -3,53 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Message</title>
+    <title>For My Love 💛</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Arial', sans-serif;
+        }
         body {
+            background: #FFD700; /* Default light off (yellow) */
+            color: #333;
             text-align: center;
-            font-family: 'Poppins', sans-serif;
-            background-color: black;
-            color: white;
-            transition: background-color 1s, color 1s;
-            padding: 20px;
+            transition: background 1s, color 1s;
         }
         .hidden-content {
             display: none;
         }
-        .reveal-btn {
-            background-color: yellow;
-            color: black;
-            padding: 15px 25px;
-            font-size: 1.5em;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: transform 0.3s;
-        }
-        .reveal-btn:hover {
-            transform: scale(1.1);
-        }
-        .container {
+        .section, .next-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
         }
-        .heart {
+        h1 {
             font-size: 2em;
-            color: red;
-            animation: heartbeat 1.5s infinite;
+            color: #FFB703;
         }
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
+        p {
+            font-size: 1.2em;
+            margin: 15px 0;
+            padding: 0 10px;
+        }
+        .alien, .bear {
+            max-width: 100px;
+            height: auto;
         }
         .scroll-down {
             font-size: 1.2em;
             margin-top: 40px;
             animation: bounce 1.5s infinite;
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(10px); }
         }
         .qr-container {
             display: flex;
@@ -68,35 +64,41 @@
             width: 150px;
             height: auto;
         }
-        .message-box {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-            display: inline-block;
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        .reveal-btn {
+            background-color: #FFB703;
+            color: black;
+            padding: 15px 25px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
             margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        .reveal-btn:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <audio id="bgMusic" loop>
-        <source src="your-music-file.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    
-    <div class="container">
-        <h1>Hey, My Love <span class="heart">❤️</span></h1>
-        <p>The world is dark without your smile... But, I have something special for you. 😘</p>
+    <div class="section">
+        <h1>Hey, My Love 💛</h1>
+        <p>I know how much you have been <strong>good to me</strong>, always caring for me in ways words can't describe.</p>
+        <p>Every moment with you is <strong>precious</strong>—the way you laugh, the joy we share, and even the difficult times we've faced together.</p>
+        <p>Let’s <strong>fight together, run together, and smile together</strong> for the years to come. 🏃‍♂️💪😊</p>
+        <p>You are <strong>deeply loved, truly cherished, and forever in my heart.</strong> 💕</p>
+        <p><strong>Actions speak louder than words!!!! Let's Move ON!!!</strong> 💕</p>
         <button class="reveal-btn" onclick="showSurprise()">Tap for a Surprise!</button>
     </div>
-    
-    <div id="hiddenContent" class="hidden-content">
-        <div class="message-box">
-            <h1>👽💌 A Special Surprise for You!</h1>
-            <p>You are <strong>deeply loved, truly cherished, and forever in my heart.</strong> 💕</p>
-            <img class="alien" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/pretty.jpeg" alt="Toy Story Aliens" width="120">
-            <p>Scan this QR code to find out how much you mean to me! 😘</p>
-        </div>
+
+    <div id="hiddenContent" class="hidden-content next-section">
+        <h1>👽💌 A Special Surprise for You!</h1>
+        <img class="alien" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/pretty.jpeg" alt="Toy Story Aliens" width="120">
+        <p>Scan this QR code to find out how much you mean to me! 😘</p>
         <div class="qr-container">
             <div class="qr-code">
                 <img src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/qr_code_surprise1.png" alt="QR Code">
@@ -109,13 +111,10 @@
 
     <script>
         function showSurprise() {
-            document.body.style.backgroundColor = "white";
-            document.body.style.color = "black";
-            document.querySelector(".reveal-btn").style.display = "none";
+            document.body.style.backgroundColor = "#FFF3CD"; /* Light on */
+            document.body.style.color = "#333";
             document.getElementById("hiddenContent").style.display = "block";
-            
-            // Play music
-            document.getElementById("bgMusic").play();
+            document.querySelector(".reveal-btn").style.display = "none";
         }
     </script>
 </body>

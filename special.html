@@ -40,6 +40,32 @@
             padding: 0 10px;
             transition: color 0.5s ease-in-out;
         }
+        .alien, .bear {
+            max-width: 100px;
+            height: auto;
+        }
+        .scroll-down {
+            font-size: 1.2em;
+            margin-top: 40px;
+            animation: bounce 1.5s infinite;
+        }
+        .qr-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .qr-code {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .qr-code img {
+            width: 150px;
+            height: auto;
+        }
         .light-button {
             padding: 15px 25px;
             font-size: 1.2em;
@@ -74,6 +100,15 @@
             <p>Let’s <strong>fight together, run together, and smile together</strong> for the years to come. 🏃‍♂️💪😊</p>
             <p>You are <strong>deeply loved, truly cherished, and forever in my heart.</strong> 💕</p>
             <p><strong>Actions speak louder than words!!!! Let's Move ON!!!</strong> 💕</p>
+            <p class="scroll-down">
+                <a href="#surprise">
+                    <img class="alien" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/alien.png" alt="Toy Story Alien">
+                </a>
+                <span>⬇️ Scroll down for a surprise ⬇️</span>
+                <a href="#surprise">
+                    <img class="bear" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/bear.png" alt="Cute Bear">
+                </a>
+            </p>
         </div>
         <div id="surprise" class="next-section">
             <h1>👽💌 A Special Surprise for You!</h1>

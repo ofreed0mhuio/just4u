@@ -13,10 +13,13 @@
             font-family: 'Arial', sans-serif;
         }
         body {
-            background: #FFF3CD;
-            color: #333;
+            background: black;
+            color: black;
             text-align: center;
-            transition: background 0.5s ease-in-out;
+            transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+        .hidden-content {
+            display: none;
         }
         .section, .next-section {
             min-height: 100vh;
@@ -37,39 +40,12 @@
             padding: 0 10px;
             transition: color 0.5s ease-in-out;
         }
-        .alien, .bear {
-            max-width: 100px;
-            height: auto;
-        }
-        .scroll-down {
-            font-size: 1.2em;
-            margin-top: 40px;
-            animation: bounce 1.5s infinite;
-        }
-        .qr-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            padding: 20px;
-        }
-        .qr-code {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .qr-code img {
-            width: 150px;
-            height: auto;
-        }
         .light-button {
-            margin-top: 20px;
-            padding: 10px 20px;
+            padding: 15px 25px;
             font-size: 1.2em;
             background: #FFB703;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
             transition: background 0.3s;
         }
@@ -77,54 +53,46 @@
             background: #FFA500;
         }
         .light-on {
-            background: #FFFAE5 !important;
+            background: #FFF3CD !important;
+            color: #333 !important;
         }
-        .light-on h1, .light-on p {
-            text-shadow: 0px 0px 10px rgba(255, 183, 3, 0.8);
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(10px); }
+        .light-on .hidden-content {
+            display: block;
         }
     </style>
 </head>
 <body>
     <div class="section">
-        <h1>Hey, My Love 💛</h1>
-        <p>I know how much you have been <strong>good to me</strong>, always caring for me in ways words can't describe.</p>
-        <p>Every moment with you is <strong>precious</strong>—the way you laugh, the joy we share, and even the difficult times we've faced together.</p>
-        <p>Let’s <strong>fight together, run together, and smile together</strong> for the years to come. 🏃‍♂️💪😊</p>
-        <p>You are <strong>deeply loved, truly cherished, and forever in my heart.</strong> 💕</p>
-        <p><strong>Actions speak louder than words!!!! Let's Move ON!!!</strong> 💕</p>
         <button class="light-button" onclick="lightUp()">Click me to Light Up! ✨</button>
-        <p class="scroll-down">
-            <a href="#surprise">
-                <img class="alien" src="https://cdn.jsdelivr.net/gh/ofreed0mhuio/myimg/alien.png" alt="Toy Story Alien">
-            </a>
-            <span>⬇️ Scroll down for a surprise ⬇️</span>
-            <a href="#surprise">
-                <img class="bear" src="https://cdn.jsdelivr.net/gh/ofreed0mhuio/myimg/bear.png" alt="Cute Bear">
-            </a>
-        </p>
     </div>
-
-    <div id="surprise" class="next-section">
-        <h1>👽💌 A Special Surprise for You!</h1>
-        <img class="alien" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/pretty.jpeg" alt="Toy Story Aliens" width="120">
-        <p>Scan this QR code to find out how much you mean to me! 😘</p>
-        <div class="qr-container">
-            <div class="qr-code">
-                <img src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/qr_code_surprise1.png" alt="QR Code">
-            </div>
-            <div class="qr-code">
-                <img src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/qr_code_surprise2.png" alt="QR Code">
+    
+    <div class="hidden-content">
+        <div class="section">
+            <h1>Hey, My Love 💛</h1>
+            <p>I know how much you have been <strong>good to me</strong>, always caring for me in ways words can't describe.</p>
+            <p>Every moment with you is <strong>precious</strong>—the way you laugh, the joy we share, and even the difficult times we've faced together.</p>
+            <p>Let’s <strong>fight together, run together, and smile together</strong> for the years to come. 🏃‍♂️💪😊</p>
+            <p>You are <strong>deeply loved, truly cherished, and forever in my heart.</strong> 💕</p>
+            <p><strong>Actions speak louder than words!!!! Let's Move ON!!!</strong> 💕</p>
+        </div>
+        <div id="surprise" class="next-section">
+            <h1>👽💌 A Special Surprise for You!</h1>
+            <img class="alien" src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/pretty.jpeg" alt="Toy Story Aliens" width="120">
+            <p>Scan this QR code to find out how much you mean to me! 😘</p>
+            <div class="qr-container">
+                <div class="qr-code">
+                    <img src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/qr_code_surprise1.png" alt="QR Code">
+                </div>
+                <div class="qr-code">
+                    <img src="https://raw.githubusercontent.com/ofreed0mhuio/myimg/main/qr_code_surprise2.png" alt="QR Code">
+                </div>
             </div>
         </div>
     </div>
 
     <script>
         function lightUp() {
-            document.body.classList.toggle('light-on');
+            document.body.classList.add('light-on');
         }
     </script>
 </body>
